@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cards">
+        <div class="cardFront">
+            <img id="cardFrontImg" src="/src/images/bg-card-front.png" alt="">
+            <div class="cardFront_requisites">
+                <img class="cardFront_requisites_logo" src="/src/images/card-logo.svg" alt="">
+                <span class="cardFront_requisites_num">0000 0000 0000 0000</span>
+                <span class="cardFront_requisites_hold" id="hold">JANE APPLESSED</span>
+                <div class = 'cardFront_requisites_date'>
+                    <span class="cardFront_requisites_mm">00</span>/<span class="cardFront_requisites_yy">00</span>
+                </div>
+            </div>
+        </div>
+        <div class="cardBack">
+            <span class="cardBack_cvc">000</span>
+            <img class="cardBack_img" src="/src/images/bg-card-back.png" alt="">
+        </div>
+    </div>
+    
+    <form class="inputsPaymentCard">
+        <img src="/src/images/bg-main-desktop.png" alt="" class="paymentCard_bg">
+        <div class="inputsPaymentCard_inputs">
+            <p>CARDHOLDER NAME</p>
+            <input class="input" name="inputHold" type="text" value="e.g. Jane Appleseed" autocomplete="off" required>
+            <p class="warningText" id="warningHold">Can't be blank</p>
+            <p>CARD NUMBER</p>
+            <input class="input" name="inputNum" value="e.g. 1234 5678 9123 0000" autocomplete="off" required>
+            <p class="warningText" id="warningNum">Can't be blank</p>
+            <div class="inputsPaymentCard_inputs_lastElem">
+                <p class="textDate">EXP. DATE (MM/YY)</p>
+                <input class="input" name="inputMM" type="text" value="MM" autocomplete="off" required>
+                <input class="input" name="inputYY" type="text" value="YY" autocomplete="off" required>
+                <p class="warningText" id="warningDate">Can't be blank</p>
+                <p class="textCVC">CVC</p>
+                <input class="input" name="inputCVC" id="CVC" type="text" value="e.g. 123" autocomplete="off" required>
+                <p class="warningText" id="warningCVC">Can't be blank</p>
+            </div>
+            <button type="button" id="buttonConfirm">Confirm</button>
+        </div>
+    </form>
+
+    <div class="inputComplete">
+        <img src="./images/icon-complete.svg" alt="">
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details</p>
+        <button id="inputComplete_button" type="button">Continue</button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
